@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    gap: 1px;
+}
+
+.board{
+   display: flex;
+    background-color: blueviolet;
+    justify-content: center;
+    align-items: center;
+}
