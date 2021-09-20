@@ -5,30 +5,28 @@ const players = (player, mark)=>{
 const player1 = players('playerX','❌')
 const player2 = players('playerO','⭕️')
 let defaultMarkX = true
-console.log(defaultMarkX)
+
 let container = document.querySelector('.container')
-valueArr =[]
+valueArr =["","","","","","","","",""]
+
+let boards = document.querySelectorAll('.board')
 
 
-let doSomething = (e) =>{
+
+
+boards.forEach((board)=>{
    
-    e.target.innerHTML = defaultMarkX? player1.mark: player2.mark
-    defaultMarkX=(!defaultMarkX)
-    console.log(e.target)
-    
-}
+    board.addEventListener('click',(e)=>{
+        e.target.innerHTML=defaultMarkX? player1.mark: player2.mark
+        valueArr.splice(e.target.dataset.index,1,defaultMarkX)
+        defaultMarkX=(!defaultMarkX)
+        
+        console.log(valueArr)
 
-container.addEventListener('click',doSomething)
 
-
-let board = document.querySelectorAll('.board')
-board = Array.from(board)
-console.log(board) //on click of the button add it to the array as well 
-
-board.forEach( (item)=> {
-    let value = item.innerHTML
-    valueArr.push(value)
-    console.log(valueArr)
     
 })
+
+})
+
 
