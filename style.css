@@ -8,6 +8,9 @@
     grid-template-columns: repeat(3,100px);
     grid-template-rows: repeat(3,100px);
     gap: 1px;
+    width:303px;
+
+    margin: 0 auto;
 }
 
 .board{
